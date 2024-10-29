@@ -1,20 +1,25 @@
 import React, { Fragment, useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { setDifficulty } from '../store/slices/gameSlice';
+
 
 export default function HomePage() {
-  const [difficulty, setDifficulty] = useState('Facile');
+    const difficulty = useSelector((state) => state.game.difficulty);
+    const dispatch = useDispatch();
 
-  const handleDifficultyChange = (event) => {
-    setDifficulty(event.target.value);
-  };
+    const handleDifficultyChange = (event) => {
+        dispatch(setDifficulty(event.target.value));
+    };
 
-  const handleNewGame = () => {
-    alert(`Nuova partita iniziata con difficoltà: ${difficulty}`);
-  };
+    const handleNewGame = () => {
+        alert(`Nuova partita iniziata con difficoltà: ${difficulty}`);
+    };
 
-  const handleReset = () => {
-    setDifficulty('Facile');
-    alert('Impostazioni resettate');
-  };
+    const handleReset = () => {
+        dispatch(setDifficulty('Facile'));
+        alert('Impostazioni resettate');
+    };
+
 
   return (
     <div className="container">
