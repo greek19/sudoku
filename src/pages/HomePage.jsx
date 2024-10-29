@@ -1,18 +1,20 @@
 import React, { Fragment, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { setDifficulty } from '../store/slices/gameSlice';
+import { useNavigate } from "react-router-dom";
 
 
 export default function HomePage() {
     const difficulty = useSelector((state) => state.game.difficulty);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleDifficultyChange = (event) => {
         dispatch(setDifficulty(event.target.value));
     };
 
     const handleNewGame = () => {
-        alert(`Nuova partita iniziata con difficoltà: ${difficulty}`);
+        navigate('/sudoku')
     };
 
     const handleReset = () => {

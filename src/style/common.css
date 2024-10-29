@@ -58,3 +58,81 @@
     background-color: #555; /* Colore più chiaro per l'effetto hover */
   }
   
+
+  /* SudokuPage.css */
+
+.sudoku-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.sudoku-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 50px);
+  grid-template-rows: repeat(9, 50px);
+  border: 3px solid #333; /* Bordo esterno */
+  margin-bottom: 1.5rem;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* Bordi sottili per ogni cella */
+.cell {
+  border: 1px solid #ccc;
+}
+
+/* Bordi più spessi per separare i blocchi 3x3 */
+.cell:nth-child(3n + 1) {
+  border-left: 3px solid #333;
+}
+.cell:nth-child(3n) {
+  border-right: 3px solid #333;
+}
+.cell:nth-child(n + 1):nth-child(-n + 9),
+.cell:nth-child(n + 28):nth-child(-n + 36),
+.cell:nth-child(n + 55):nth-child(-n + 63) {
+  border-top: 3px solid #333;
+}
+.cell:nth-child(n + 19):nth-child(-n + 27),
+.cell:nth-child(n + 46):nth-child(-n + 54),
+.cell:nth-child(n + 73):nth-child(-n + 81) {
+  border-bottom: 3px solid #333;
+}
+
+.number-pad {
+  display: flex;
+  gap: 1rem;
+}
+
+.number-button {
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.number-button:hover {
+  background-color: #555;
+}
+
