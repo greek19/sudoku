@@ -1,5 +1,5 @@
 import React, { StrictMode } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
@@ -7,9 +7,9 @@ import './index.css';
 
 ReactDOM.render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>  
+    </HashRouter>  
   </StrictMode>,
   document.getElementById('root'),
 )
