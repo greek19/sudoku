@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: #f0f0f0; /* Colore di sfondo monocromatico chiaro */
     color: #333; /* Colore del testo */
     font-family: Arial, sans-serif;
@@ -98,6 +98,18 @@
   border: 1px solid #ccc;
 }
 
+/* Evidenzia la cella selezionata */
+.cell.selected {
+  background-color: #e0f7fa; /* Colore di evidenziazione per la cella selezionata */
+  border-color: #00796b;
+}
+
+/* Evidenzia la riga e la colonna della cella selezionata */
+.cell.highlight {
+  background-color: #f1f8e9; /* Colore di evidenziazione per la riga e la colonna */
+}
+
+
 /* Bordi più spessi per separare i blocchi 3x3 */
 .cell:nth-child(3n + 1) {
   border-left: 3px solid #333;
@@ -135,4 +147,5 @@
 .number-button:hover {
   background-color: #555;
 }
+
 
