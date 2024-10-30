@@ -1,0 +1,12 @@
+{
+  "home": {
+    "selezionaDifficolta": "Wählen Sie die Schwierigkeit"
+  },
+  "sudoku": "Sudoku",
+  "generate": "Sudoku generieren",
+  "difficulty": "Schwierigkeit",
+  "easy": "Einfach",
+  "medium": "Mittel",
+  "hard": "Schwierig",
+  "expert": "Experte"
+}
