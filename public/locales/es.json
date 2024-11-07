@@ -1,0 +1,13 @@
+{
+    "home": {
+      "selezionaDifficolta": "Seleccionar Dificultad"
+    },
+    "sudoku": "Sudoku",
+    "generate": "Generar Sudoku",
+    "difficulty": "Dificultad",
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Difícil",
+    "expert": "Experto"
+  }
+  
